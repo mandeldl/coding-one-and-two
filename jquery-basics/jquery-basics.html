@@ -5,6 +5,11 @@
 	<title>jQuery Basics</title>
 	<!-- It's OK to add jQuery in the head: -->
 	<script src="https://code.jquery.com/jquery-3.2.1.js"integrity="sha256-DZAnKJ/6XZ9si04Hgrsxu/8s717jcIzLy3oi35EouyE=" crossorigin="anonymous"></script>
+	<style>
+		body {
+	    		padding: 0 10rem;
+		}
+	</style>
 </head>
 <body>
 
@@ -34,7 +39,11 @@
 
 	<p>Once selected, the element can now use jQuery methods.  You can see a full list at <a target="_blank" href="https://api.jquery.com/">jQuery API</a>.  Some common ones are <a target="_blank" href="https://api.jquery.com/css/">CSS()</a>, <a target="_blank" href="https://api.jquery.com/hide/">hide()</a>, and <a target="_blank" href="https://api.jquery.com/show/">show()</a></p>
 	<p>jQuery's documentation can be a little overwhelming, but they provide good examples.  Don't be discouraged if there are speedbumps.  You can always try Googling "How do I _____ with jQuery?"  StackOverflow will usually have great answers.</p>
+	<pre>
+		$jquerySelectedElement.css('color', 'red');
+	</pre>
 	<p id="test-id">Look what did to this <strong>p tag with an id of test-id</strong> </p>
+	<p>We used jQuery's CSS method and passed it 2 strings: the first was the CSS property we wanted to change, the 2nd the new value for that property.</p>
 
 	<button id="alert-button">Trigger an alert</button>
 
