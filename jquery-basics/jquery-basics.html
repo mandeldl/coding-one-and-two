@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>jQuery Basics</title>
+	<!-- It's OK to add jQuery in the head: -->
+	<script src="https://code.jquery.com/jquery-3.2.1.js"integrity="sha256-DZAnKJ/6XZ9si04Hgrsxu/8s717jcIzLy3oi35EouyE=" crossorigin="anonymous"></script>
+</head>
+<body>
+
+	<h1>jQuery Basics</h1>
+	<p>Why use jQuery?</p>
+	<ul>
+		<li>Less typing</li>
+		<li>Consistency between browsers</li>
+		<li>Lots of plugins to do the fancier stuff more easily</li>
+	</ul>
+	<p>jQuery is a JavaScript <strong>library</strong>, it works on top of JavaScript to simplify things</p>
+
+	<p>jQuery has to be added <i>before</i> the JS you write that uses it.  It's basically declaring a variable <strong>$</strong>, that you can use in your code.</p>
+
+	<p>You can either download and load jQuery locally along with your other JS file, or you can use a CDN: <a target="_blank" href="https://code.jquery.com/">jQuery CDN</a></p>
+	 
+	<p>You select a variable with the jQuery shortcut command ($)</p>
+
+	<pre>
+		var $jquerySelectedElement = $("#test-id");
+	</pre>
+
+	<p>Remember that what you're passing to the <strong>$</strong> function is a <strong>string</strong> with the CSS selector:</p>
+
+	<p>This won't work: <pre>$(#id)</pre></p>
+	<p>This will: <pre>$('#id')</pre></p>
+
+	<p id="test-id">Look what did to this <strong>p tag with an id of test-id</strong> </p>
+
+	<button id="alert-button">Trigger an alert</button>
+
+	<p class="another-test">Click the button below to change the styles of this paragraph.</p>
+
+	<button id="animation-button">Click Me!</button>
+
+	<p class="hide-and-show">This paragraph gets hidden and shown when you click the button below!</p>
+	<button id="hider">Click to hide and show</button>
+	 
+	<script>
+		// Because we pulled jQuery in from the CDN in the head, we have that variable already defined:
+		console.log("Is jQuery on the page: ", (jQuery !== undefined));
+	</script>
+	<!-- Our JS code can use jQuery now: -->
+	<script src="jquery-basics.js"></script>
+</body>
+</html>
