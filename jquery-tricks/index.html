@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>jQuery tricks</title>
+	<!-- Remember to add jQuery in the head: -->
+	<script src="https://code.jquery.com/jquery-3.2.1.js"integrity="sha256-DZAnKJ/6XZ9si04Hgrsxu/8s717jcIzLy3oi35EouyE=" crossorigin="anonymous"></script>
+	<style>
+		body {
+	    	padding: 0 10rem;
+		}
+
+		.black-on-white {
+			background: black;
+			color: white;
+		}
+
+		.white-on-blue {
+			background: white;
+			color: blue;
+		}
+		.white-on-red {
+			background: white;
+			color: red;
+		}
+	</style>
+</head>
+<body>
+
+	<h1>jQuery tricks</h1>
+	<p>More practice with useful methods</p>
+	<ul>
+		<li>.addClass(), .removeClass(), and .toggleClass() - let your CSS class rules do the work!</li>
+		<li>.hide(), .show(), and .toggle() - toggle is the smart way to do the opposite of what it's currently doing</li>
+	</ul>
+	<p id="first-example" class="black-on-white">1st Example: Hover to change me!</p>
+
+	<pre>
+		// 1st Example: Changing classes
+
+		// First declare our variable: in this example,
+		// this is both the target of the event AND the class change:
+		var $firstExample = $('#first-example');
+
+		// We can write the functions separately:
+		function whiteOnBlack() {
+			$firstExample.removeClass('black-on-white'); //remove first class
+			$firstExample.addClass('white-on-blue'); //add second
+		}
+
+		function blackOnWhite() {
+			$firstExample.addClass('black-on-white');  //same in reverse:
+			$firstExample.removeClass('white-on-blue');
+		}
+
+		// Hover can take 2 functions: 1st is for hover ON, second is for hover OFF:
+		$firstExample.hover(whiteOnBlack, blackOnWhite);
+	</pre>
+
+	<p id="second-example">2nd Example: Hover me to change the guy above!</p>
+
+	<pre>
+		// 2nd Example: Even simpler with toggleClass()
+
+		var $secondExample = $('#second-example');
+
+		function toggleBlackAndWhite() {
+			// toggleClass checks to see if that class is already on the element:
+			// If it is, it removes it, if it isn't, it adds it
+			$firstExample.toggleClass('black-on-white white-on-red');
+			// Note that we can add/remove/toggle multiple classes: just separate with a space!
+		}
+
+		$secondExample.hover(toggleBlackAndWhite);
+	</pre>
+	<p><a href="http://api.jquery.com/toggleclass/">.toggleClass() API</a></p>
+
+	<p>jQuery has to be added <i>before</i> the JS you write that uses it.  It's basically declaring a variable <strong>$</strong>, that you can use in your code.</p>
+
+	<p>You can either download and load jQuery locally along with your other JS file, or you can use a CDN: <a target="_blank" href="https://code.jquery.com/">jQuery CDN</a></p>
+	 
+	<p>You select a variable with the jQuery shortcut command ($)</p>
+
+	<pre>
+		var $jquerySelectedElement = $("#test-id");
+	</pre>
+
+	<p>Remember that what you're passing to the <strong>$</strong> function is a <strong>string</strong> with the CSS selector:</p>
+
+	<p>This won't work: <pre>$(#id)</pre></p>
+	<p>This will: <pre>$('#id')</pre></p>
+
+	<p>Once selected, the element can now use jQuery methods.  You can see a full list at <a target="_blank" href="https://api.jquery.com/">jQuery API</a>.  Some common ones are <a target="_blank" href="https://api.jquery.com/css/">CSS()</a>, <a target="_blank" href="https://api.jquery.com/hide/">hide()</a>, and <a target="_blank" href="https://api.jquery.com/show/">show()</a></p>
+	<p>jQuery's documentation can be a little overwhelming, but they provide good examples.  Don't be discouraged if there are speedbumps.  You can always try Googling "How do I _____ with jQuery?"  StackOverflow will usually have great answers.</p>
+	<pre>
+		$jquerySelectedElement.css('color', 'red');
+	</pre>
+	<p id="test-id">Look what did to this <strong>p tag with an id of test-id</strong> </p>
+	<p>We used jQuery's CSS method and passed it 2 strings: the first was the CSS property we wanted to change, the 2nd the new value for that property.</p>
+
+	<p>But jQuery's real power comes in making it easier to create and respond to EVENTS.  Like when a user clicks or hovers over an element:</p>
+	
+	<pre>
+		$("#alert-button").click(function() {
+			alert("You clicked the button!");
+		});
+	</pre>
+	<button id="alert-button">Trigger an alert</button>
+	<p>We select the #alert-button with <strong>$</strong>, then use the <strong>click</strong> method, passing that a function that contains the code we want to execute.</p>
+
+	<p class="another-test">Click the button below to change the styles of this paragraph.</p>
+
+	<button id="animation-button">Click Me!</button>
+
+	<p class="hide-and-show">This paragraph gets hidden and shown when you click the button below!</p>
+	<button id="hider">Click to hide and show</button>
+	 
+	<script>
+		// Because we pulled jQuery in from the CDN in the head, we have that variable already defined:
+		console.log("Is jQuery on the page: ", (jQuery !== undefined));
+	</script>
+	<!-- Our JS code can use jQuery now: -->
+	<script src="jquery-tricks.js"></script>
+</body>
+</html>
