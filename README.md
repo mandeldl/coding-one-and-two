@@ -21,6 +21,8 @@ Starting with jQuery
 
 [jQuery Basics Page](https://mandeldl.github.io/coding-one-and-two/jquery-basics/jquery-basics.html)
 
+[10 Mistakes That JavaScript Beginners Often Make](https://tutorialzine.com/2014/04/10-mistakes-javascript-beginners-make)
+
 # Day 2 - jQuery
  
 Most common design JS things: changing styles, changing classes, show/hiding stuff
