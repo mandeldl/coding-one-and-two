@@ -43,7 +43,7 @@
 		var $firstExample = $('#first-example');
 
 		// We can write the functions separately:
-		function whiteOnBlack() {
+		function whiteOnBlue() {
 			$firstExample.removeClass('black-on-white'); //remove first class
 			$firstExample.addClass('white-on-blue'); //add second
 		}
@@ -56,7 +56,7 @@
 		// Hover can take 2 functions: 1st is for hover ON, second is for hover OFF:
 		$firstExample.hover(whiteOnBlack, blackOnWhite);
 	</pre>
-
+	<hr>
 	<p id="second-example">2nd Example: Hover me to change the guy above!</p>
 
 	<pre>
@@ -73,47 +73,25 @@
 
 		$secondExample.hover(toggleBlackAndWhite);
 	</pre>
-	<p><a href="http://api.jquery.com/toggleclass/">.toggleClass() API</a></p>
-
-	<p>jQuery has to be added <i>before</i> the JS you write that uses it.  It's basically declaring a variable <strong>$</strong>, that you can use in your code.</p>
-
-	<p>You can either download and load jQuery locally along with your other JS file, or you can use a CDN: <a target="_blank" href="https://code.jquery.com/">jQuery CDN</a></p>
-	 
-	<p>You select a variable with the jQuery shortcut command ($)</p>
+	<p><a target="_blank" href="http://api.jquery.com/toggleclass/">.toggleClass() API</a></p>
+	<hr>
+	<p id="third-example">This paragraph gets hidden and shown when you click the button below!</p>
+	<button id="hider">Click to hide and show</button>
 
 	<pre>
-		var $jquerySelectedElement = $("#test-id");
-	</pre>
+		// 3rd Example: just .toggle() switches display
 
-	<p>Remember that what you're passing to the <strong>$</strong> function is a <strong>string</strong> with the CSS selector:</p>
+		var $thirdExample = $('#third-example');
+		var $hider = $('#hider');
 
-	<p>This won't work: <pre>$(#id)</pre></p>
-	<p>This will: <pre>$('#id')</pre></p>
-
-	<p>Once selected, the element can now use jQuery methods.  You can see a full list at <a target="_blank" href="https://api.jquery.com/">jQuery API</a>.  Some common ones are <a target="_blank" href="https://api.jquery.com/css/">CSS()</a>, <a target="_blank" href="https://api.jquery.com/hide/">hide()</a>, and <a target="_blank" href="https://api.jquery.com/show/">show()</a></p>
-	<p>jQuery's documentation can be a little overwhelming, but they provide good examples.  Don't be discouraged if there are speedbumps.  You can always try Googling "How do I _____ with jQuery?"  StackOverflow will usually have great answers.</p>
-	<pre>
-		$jquerySelectedElement.css('color', 'red');
-	</pre>
-	<p id="test-id">Look what did to this <strong>p tag with an id of test-id</strong> </p>
-	<p>We used jQuery's CSS method and passed it 2 strings: the first was the CSS property we wanted to change, the 2nd the new value for that property.</p>
-
-	<p>But jQuery's real power comes in making it easier to create and respond to EVENTS.  Like when a user clicks or hovers over an element:</p>
-	
-	<pre>
-		$("#alert-button").click(function() {
-			alert("You clicked the button!");
+		$hider.click(function () {
+			$thirdExample.toggle(1000);
 		});
 	</pre>
-	<button id="alert-button">Trigger an alert</button>
-	<p>We select the #alert-button with <strong>$</strong>, then use the <strong>click</strong> method, passing that a function that contains the code we want to execute.</p>
 
-	<p class="another-test">Click the button below to change the styles of this paragraph.</p>
+	<p>.toggle() can take an optional number value (milliseconds) for animating the show/hide. <a target="_blank" href="http://api.jquery.com/toggle/">.toggle() API</a></p>
 
-	<button id="animation-button">Click Me!</button>
-
-	<p class="hide-and-show">This paragraph gets hidden and shown when you click the button below!</p>
-	<button id="hider">Click to hide and show</button>
+	<p>Also be sure to check out <a target="_blank" href="http://api.jquery.com/fadetoggle/">.fadeToggle()</a> and <a target="_blank" href="http://api.jquery.com/slidetoggle/">.slideToggle()</a>, which do similar things (and obviously means that there's a .fadeIn(), .fadeOut(), etc.</p>
 	 
 	<script>
 		// Because we pulled jQuery in from the CDN in the head, we have that variable already defined:

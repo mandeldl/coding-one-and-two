@@ -5,7 +5,7 @@
 var $firstExample = $('#first-example');
 
 // We can write the functions separately:
-function whiteOnBlack() {
+function whiteOnBlue() {
 	$firstExample.removeClass('black-on-white'); //remove first class
 	$firstExample.addClass('white-on-blue'); //add second
 }
@@ -16,7 +16,7 @@ function blackOnWhite() {
 }
 
 // Hover can take 2 functions: 1st is for hover ON, second is for hover OFF:
-$firstExample.hover(whiteOnBlack, blackOnWhite);
+$firstExample.hover(whiteOnBlue, blackOnWhite);
 
 
 // 2nd Example: Even simpler with toggleClass()
@@ -31,3 +31,12 @@ function toggleBlackAndWhite() {
 }
 
 $secondExample.hover(toggleBlackAndWhite);
+
+// 3rd Example: just .toggle() switches display
+
+var $thirdExample = $('#third-example');
+var $hider = $('#hider');
+
+$hider.click(function () {
+	$thirdExample.toggle(1000);
+});
