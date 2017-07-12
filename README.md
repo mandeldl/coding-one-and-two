@@ -26,3 +26,11 @@ Starting with jQuery
 Most common design JS things: changing styles, changing classes, show/hiding stuff
 
 [jQuery Tricks page](https://mandeldl.github.io/coding-one-and-two/jquery-tricks/)
+
+## jQuery Plugins
+
+Slick (a Carousel/image slider) - http://kenwheeler.github.io/slick/
+
+ScrollMe (fun animations as you scroll) - http://scrollme.nckprsn.com/
+
+More - https://speckyboy.com/free-jquery-plugins/
