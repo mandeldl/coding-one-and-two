@@ -18,14 +18,20 @@
 		.slick-example {
 			max-width: 50vw;
 		}
+
+		.text {
+			background: white;
+		}
 	</style>
 </head>
 <body>
 
-	<h1>jQuery Plugins - Slick</h1>
-	<p><a target="_blank" href="http://kenwheeler.github.io/slick/">Slick</a> has great documentation.  Navigate to the "Get it Now" section and copy those URLs.  Place the CSS in the head and the JS at the bottom of your page.  Note that you may have to add <i>https:</i> before the "//"</p>
-	<p>Just add the markup like in their example:</p>
-	<img class="slick-example" src="slick-example.png" alt="">
+	<div class="text">
+		<h1>jQuery Plugins - Slick</h1>
+		<p><a target="_blank" href="http://kenwheeler.github.io/slick/">Slick</a> has great documentation.  Navigate to the "Get it Now" section and copy those URLs.  Place the CSS in the head and the JS at the bottom of your page.  Note that you may have to add <i>https:</i> before the "//"</p>
+		<p>Just add the markup like in their example:</p>
+		<img class="slick-example" src="slick-example.png" alt="">
+	</div>
 	<div class="your-class">
 	  <div>
 	  	<img src="http://lorempixel.com/400/200/cats/1" alt="">
@@ -37,9 +43,24 @@
 	  	<img src="http://lorempixel.com/400/200/cats/3" alt="">
 	  </div>
 	</div>
+
+	<div class="text">
+		<p>Note that Slick accepts as it's argument an Object (like when we're changing multiple CSS properties with jQuery).</p>
+		<p>Remember it's like a bunch of variables within curly braces, but instead of = signs they use :</p>
+		<p>And instead of a semicolon ; they use a comma ,</p>
+		
+		<pre>
+			$('.your-class').slick({
+				autoplay: true,
+				dots: true
+			});
+		</pre>
+	</div>
 	
 	<hr>
-	<p>Good source for dummy images: <a href="http://lorempixel.com/">Lorem Pixel</a></p>
+	<div class="text">
+		<p>Good source for dummy images: <a href="http://lorempixel.com/">Lorem Pixel</a></p>
+	</div>
 	<hr>
 	 
 	<script>
