@@ -24,5 +24,5 @@ Starting with jQuery
 # Day 2 - jQuery
  
 Most common design JS things: changing styles, changing classes, show/hiding stuff
- 
- 
+
+[jQuery Tricks page](https://mandeldl.github.io/coding-one-and-two/jquery-tricks/)
