@@ -31,6 +31,10 @@ Most common design JS things: changing styles, changing classes, show/hiding stu
 
 [jQuery Plugin Example - Slick](https://mandeldl.github.io/coding-one-and-two/jquery-plugins/slick.html)
 
+[jQuery Plugin Example on Codepen: ScrollMe](https://codepen.io/mandeldl/pen/JJxjLZ)
+
+Note the 2 different ways we can set options for our plugins - object, or data-attributes on the HTML.
+
 Slick (a Carousel/image slider) - http://kenwheeler.github.io/slick/
 
 ScrollMe (fun animations as you scroll) - http://scrollme.nckprsn.com/
