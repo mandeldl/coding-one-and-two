@@ -29,6 +29,8 @@ Most common design JS things: changing styles, changing classes, show/hiding stu
 
 ## jQuery Plugins
 
+[jQuery Plugin Example - Slick](https://mandeldl.github.io/coding-one-and-two/jquery-plugins/slick.html)
+
 Slick (a Carousel/image slider) - http://kenwheeler.github.io/slick/
 
 ScrollMe (fun animations as you scroll) - http://scrollme.nckprsn.com/
