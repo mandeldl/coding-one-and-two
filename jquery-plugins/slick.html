@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>jQuery Plugins</title>
+	<!-- Remember to add jQuery in the head: -->
+	<script src="https://code.jquery.com/jquery-3.2.1.js"integrity="sha256-DZAnKJ/6XZ9si04Hgrsxu/8s717jcIzLy3oi35EouyE=" crossorigin="anonymous"></script>
+	<!-- Slick CSS -->
+	<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/jquery.slick/1.6.0/slick.css"/>
+	<style>
+		body {
+	    	padding: 0 10rem;
+		}
+
+		.slick-example {
+			max-width: 50vw;
+		}
+	</style>
+</head>
+<body>
+
+	<h1>jQuery Plugins</h1>
+	<p>Slick</p>
+	<p>Slick has great documentation.  Navigate to the "Get it Now" section and copy those URLs.  Place the CSS in the head and the JS at the bottom of your page.  Note that you may have to add <i>https:</i> before the "//"</p>
+	<p>Just add the markup like in their example:</p>
+	<img class="slick-example" src="slick-example.png" alt="">
+	<div class="your-class">
+	  <div>
+	  	<img src="http://lorempixel.com/400/200/cats/1" alt="">
+	  </div>
+	  <div>
+	  	<img src="http://lorempixel.com/400/200/cats/2" alt="">
+	  </div>
+	  <div>
+	  	<img src="http://lorempixel.com/400/200/cats/3" alt="">
+	  </div>
+	</div>
+	<ul>
+		<li>.addClass(), .removeClass(), and .toggleClass() - let your CSS class rules do the work!</li>
+		<li>.hide(), .show(), and .toggle() - toggle is the smart way to do the opposite of what it's currently doing</li>
+	</ul>
+	<p id="first-example" class="black-on-white">1st Example: Hover to change me!</p>
+
+	<pre>
+		// 1st Example: Changing classes
+
+		// First declare our variable: in this example,
+		// this is both the target of the event AND the class change:
+		var $firstExample = $('#first-example');
+
+		// We can write the functions separately:
+		function whiteOnBlue() {
+			$firstExample.removeClass('black-on-white'); //remove first class
+			$firstExample.addClass('white-on-blue'); //add second
+		}
+
+		function blackOnWhite() {
+			$firstExample.addClass('black-on-white');  //same in reverse:
+			$firstExample.removeClass('white-on-blue');
+		}
+
+		// Hover can take 2 functions: 1st is for hover ON, second is for hover OFF:
+		$firstExample.hover(whiteOnBlack, blackOnWhite);
+	</pre>
+	<hr>
+	 
+	<script>
+		// Because we pulled jQuery in from the CDN in the head, we have that variable already defined:
+		console.log("Is jQuery on the page: ", (jQuery !== undefined));
+	</script>
+	<!-- Remember we need to add the Slick JS BEFORE ours! -->
+	<script type="text/javascript" src="https://cdn.jsdelivr.net/jquery.slick/1.6.0/slick.min.js"></script>
+	<!-- Our JS code can use jQuery now: -->
+	<script src="jquery-slick.js"></script>			
+</body>
+</html>
